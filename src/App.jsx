@@ -40,7 +40,7 @@ export default function App() {
 
   const fetchPage = async (page) => {
     const res = await fetch(
-      "https://api.discogs.com/users/" + import.meta.env.VITE_DISCOGS_USERNAME + "/wants?token=" + import.meta.env.VITE_DISCOGS_TOKEN + "&page=" + page + "&per_page=500"
+      "https://api.discogs.com/users/" + import.meta.env.VITE_DISCOGS_USERNAME + "/wants?token=" + import.meta.env.VITE_DISCOGS_TOKEN + "&page=" + page + "&per_page=500&sort_order=desc&sort=added"
     );
     const data = await res.json();
     return data;
