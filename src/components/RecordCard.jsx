@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function RecordCard({ image, artist, title, url, year }) {
   return (
-    <Card className="mx-8 w-[600px] p-4 bg-white">
+    <Card className="mx-1 w-[600px] p-4 bg-white">
       <CardContent className="flex flex-col items-center">
         <img
           src={image}
