@@ -76,7 +76,7 @@ export default function App() {
   }, []);
 
   if (loading) {
-    return <div className="text-center text-xl py-10">Loading {currentPageLoading} of {numberOfPagesToLoad == 1 ? 'unknown' : numberOfPagesToLoad}...</div>;
+    return <div className="text-center text-xl py-10">Loading {currentPageLoading} of {numberOfPagesToLoad == 1 ? 'unknown (loading first batch)' : numberOfPagesToLoad}...</div>;
   }
 
   return (
