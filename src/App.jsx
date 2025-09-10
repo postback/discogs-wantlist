@@ -29,6 +29,10 @@ export default function App() {
     setCurrentIndex((prev) => (prev - 1 + wantlist.length) % wantlist.length);
   };
 
+  const handleGoTo = (goTo) => {
+    setCurrentIndex(goTo-1);
+  };
+
   // Up and down keys jump for {jumpItems} records
   const handleUp = () => {
     setCurrentIndex((prev) => (prev + jumpItems) % wantlist.length);
@@ -86,6 +90,7 @@ export default function App() {
       item={wantlist[currentIndex]}
       onNext={handleNext}
       onPrev={handlePrev}
+      onGoTo={handleGoTo}
     />
   );
 }
